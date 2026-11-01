@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ip-shakti-sahayak"
+version = "0.1.0"
+description = "Image-based Animal Type Classification (breed + body traits) for cattle and buffaloes"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+  "numpy",
+  "pillow",
+  "torch",
+  "torchvision",
+  "streamlit",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
